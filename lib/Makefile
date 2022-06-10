@@ -659,7 +659,7 @@ ${ASM_OBJS}: %.o: %.S ${IMACROS_FILE}
 	${NORMAL_S}
 
 ${OBJS}: %.o: %.c ${IMACROS_FILE}
-	${NORMAL_C}
+	${NORMAL_C} -Wno-stringop-overread -Wno-stringop-overflow
 
 
 .SUFFIXES: .m
